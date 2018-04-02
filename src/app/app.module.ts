@@ -3,14 +3,28 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './component/header/header.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { AboutComponent } from './page/about/about.component';
+import { LoginComponent } from './page/login/login.component';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    AboutComponent,
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      {path : '' , component : LoginComponent},
+      {path : 'about' , component : AboutComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
