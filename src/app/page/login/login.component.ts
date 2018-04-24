@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class LoginComponent{
   title = 'login-page';
   loginImage = 'https://angular.io/assets/images/logos/angular/angular.svg';
- 
+  
 }
