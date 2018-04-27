@@ -1,1 +1,33 @@
-<h1>contact page</h1>
+<div class="container">
+    <h1>contact page</h1>
+
+
+
+
+    <br><br>
+    <p class="heading">Interpolation</p>
+    <p>Your bucket list ({{ itemCount }})</p>
+    <br><br><br>
+
+
+
+    <P class="heading">Property Binding</P>
+    <input type="submit" class="btn btn-success" [value]="btnText">
+    <br><br><br><br><br>
+
+
+
+    <p class="heading">two way data binding</p>
+    <input type="text" class="txt" name="item" placeholder="Life goal.." [(ngModel)]="goalText">
+    <input type="submit" class="btn btn-success" value="add" (click)="addItem()">
+
+
+
+
+    
+    <div class="result-box">
+        <p class="life-container" *ngFor="let goal of goals">
+            {{ goal }}
+        </p>
+    </div>
+</div>

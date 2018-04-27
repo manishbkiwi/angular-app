@@ -6,5 +6,12 @@ import { Component } from "@angular/core";
     styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-
+    btnText: string = 'Add an Item Property Binding';
+    goalText: string = '';
+    goals = [];
+    addItem() {
+        this.goals.push(this.goalText);
+        this.goalText ='';
+      }
 }
+

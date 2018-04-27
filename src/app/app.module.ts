@@ -11,6 +11,7 @@ import { AboutComponent } from './page/about/about.component';
 import { LoginComponent } from './page/login/login.component';
 import { RouterModule } from '@angular/router';
 import { HeroesComponent } from './page/heros/heros.component';
+import { ContactComponent } from './page/contact-us/contact.component';
 import { DataService } from './data.service';
 
 
@@ -22,14 +23,28 @@ import { DataService } from './data.service';
     AboutComponent,
     FooterComponent,
     LoginComponent,
-    HeroesComponent
+    HeroesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path : '' , component : LoginComponent},
-      {path : 'about' , component : AboutComponent},
-      {path : 'heros' , component : HeroesComponent},
+      {
+        path : '' , 
+        component : LoginComponent
+      },
+      {
+        path : 'about' , 
+        component : AboutComponent
+      },
+      {
+        path : 'heros' , 
+        component : HeroesComponent
+      },
+      {
+        path : 'contact' , 
+        component : ContactComponent
+      },
     ]),
     FormsModule,
     HttpModule
