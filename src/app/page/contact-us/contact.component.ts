@@ -8,9 +8,12 @@ import { Component } from "@angular/core";
 export class ContactComponent {
     btnText: string = 'Add an Item Property Binding';
     goalText: string = '';
+    goalNo = [];
     goals = [];
+    Numbers = '';
     addItem() {
         this.goals.push(this.goalText);
+        this.goalNo.push(this.Numbers);
         this.goalText ='';
       }
 }
